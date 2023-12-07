@@ -10,3 +10,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Passer dynamiquement les donner dans une modal vide qui se remplie en fonction du film sur lequel je clique.
 => création d'un composant modal enfant de "api" qui prend en compte l'id du film (la route de l'API est développée dans swapi service)
+
+## Lancement
+
+npm install
+go live : ng serve
