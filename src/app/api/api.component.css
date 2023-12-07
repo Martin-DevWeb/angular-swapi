@@ -1,0 +1,15 @@
+dialog {
+  padding: 0.5rem;
+  background: whitesmoke;
+  border-radius: 0.25rem;
+  max-width: 50%;
+}
+
+dialog::backdrop {
+  background-color: lightyellow;
+  opacity: 0.5;
+}
+
+.container {
+  margin: 1rem;
+}

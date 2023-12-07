@@ -1,0 +1,23 @@
+<div *ngIf="isLoading">
+  <p>Récupération des données en cours...</p>
+</div>
+
+<div *ngIf="!isLoading">
+  <div *ngFor="let film of films">
+    <div class="container">
+      <button type="button" (click)="openModal(film['episode_id'])">
+        {{ film["title"] }} ({{ film["release_date"] }})
+      </button>
+      <dialog id="{{ film['episode_id'] }}">
+        <h3>
+          {{ film["title"] }} ({{ film["release_date"] }}) - episode
+          {{ film["episode_id"] }}
+        </h3>
+        <p><strong>Director :</strong> {{ film["director"] }}</p>
+        <p><strong>Producer :</strong> {{ film["producer"] }}</p>
+        <p><strong>Opening crawl :</strong> {{ film["opening_crawl"] }}</p>
+        <button (click)="closeModal(film['episode_id'])">Close</button>
+      </dialog>
+    </div>
+  </div>
+</div>
